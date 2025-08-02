@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Solver Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/trial.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>"Math Solver Bot!"</h1>
+        </header>
+
+        <div class="grid-container">
+            <!-- Basic Arithmetic Operations -->
+            <div class="grid-item">
+                <h2><u>Basic Arithmetic Operations</u></h2>
+                <input type="text" id="basic_expression" placeholder="Enter an expression">
+                <button class="btn" onclick="solveBasic()">Calculate</button>
+                <div id="basic_result"></div>
+            </div>
+
+            <!-- Solve Algebraic Equations -->
+            <div class="grid-item">
+                <h2><u>Solve Equations</u></h2>
+                <input type="text" id="equation_input" placeholder="Enter an equation (e.g., 2*x + 3 = 0)">
+                <button class="btn" onclick="solveEquation()">Solve</button>
+                <div id="equation_result"></div>
+            </div>
+
+            <!--Trignometric operations-->
+                 <div class="grid-item">
+                <h2><u>Trigonometric Operations</u></h2>
+                <input type="text" id="trig_function" placeholder="Enter a trigonometric function (e.g., sin(30))">
+                <button class="btn" onclick="calculateTrigonometricDerivative()">Calculate</button>
+                <div id="trig_result"></div>  <!-- Result will be shown here -->
+            </div>
+
+            <!--plot graph-->
+            <div class="grid-item plot-graph"> 
+                <h2><u>Plot Graph</u></h2>
+                <input type="text" id="graph_function" placeholder="Enter a function to plot">
+                <button class="button" onclick="plotGraph()">Plot</button>
+                <div id="graph_result">
+                    <img id="graph_img" alt="Graph will be displayed here" />
+                </div>
+            </div>
+
+            <!-- Derivatives -->
+            <div class="grid-item">
+                <h2><u>Derivative Calculator</u></h2>
+                <input type="text" id="derivative_function" placeholder="Enter a function to differentiate">
+                <button class="btn" onclick="calculateDerivative()">Calculate</button>
+                <div id="derivative_result"></div>
+            </div>
+
+            <!-- Integrals -->
+            <div class="grid-item">
+                <h2><u>Integral Calculator</u></h2>
+                <input type="text" id="integral_function" placeholder="Enter a function to integrate">
+                <button class="btn" onclick="calculateIntegral()">Calculate</button>
+                <div id="integral_result"></div>
+                <div id="definite_integral_result"></div>
+            </div>
+
+            <!-- Limit -->
+            <div class="grid-item">
+                <h2><u>Limit Calculator</u></h2>
+                <input type="text" id="limit_function" placeholder="Enter a function for limit">
+                <button class="btn" onclick="calculateLimit()">Calculate</button>
+                <div id="limit_result"></div>
+            </div>
+        
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/trial2.js') }}"></script>
+</body>
+</html>
